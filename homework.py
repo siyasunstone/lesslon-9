@@ -1,16 +1,16 @@
-bill = float(input("Enter the total bill: "))
-due = bill
+try:
+ num = int(input("Enter your number : "))
+ print(num)
+except ValueError as ex:
+  print("Exception: ",ex)
+except:
+  print("Error Occured")
+finally:
+  print("I will execute no matter what happens")
 
-while True:
-    print("Your due amount is:", due)
-    pay = float(input("Enter amount to pay: "))
 
-    if pay >= due:
-        print("Bill is paid.")
-        due = 0
-        break
-    else:
-        due = due - pay
-        print("Remaining due:", due)
 
-print("Thank you")
+for i in range(1,11):
+    if i==3:
+      continue
+    print(i)
